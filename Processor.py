@@ -102,4 +102,19 @@ def coefficient_of_variation(m, d):
     answer = d / m
     return answer
 
+def first_skewness_coefficient(m,M,ds):
+    #This function will compute first skewness coefficient.
+    answer = m - M
+    answer /= ds
+    return answer
+
+def second_skewness_coefficient(m,med,ds):
+    #This program compute second skewness coefficient
+    answer = 3 * (m - med)
+    answer /= ds
+    return answer
+ 
+
+
+
 # Main program:
