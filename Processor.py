@@ -28,7 +28,22 @@ def median(arr):
 def Sortation(arr):
     arr.sort()
 
-
+def mode(arr):
+    #This function compute mode of data. It will also return multiple modes as well.
+    seen = []
+    counter = []
+    for i in arr:
+        if i in seen:
+            counter[seen.index(i)] += 1
+        else:
+            seen.append(i)
+            counter.append(1)
+    answer = []
+    max_count = max(counter)
+    for i in range(len(counter)):
+        if counter[i] == max_count:
+            answer.append(seen[i])
+    return answer
 
 
 
