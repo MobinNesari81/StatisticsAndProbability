@@ -10,6 +10,7 @@ import math
 #   Notice that you need both numpy and matplotlib libraries for running this program.
 
 # Functions:
+    # Central Tendecies:
 def mean(arr):
     #This function compute mean of data.
     summation = sum(arr)
