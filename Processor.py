@@ -87,5 +87,17 @@ def range_data(arr):
     answer = maximum(arr) - minimum(arr)
     return answer
 
+def variance(arr, m):
+    answer = 0
+    for i in arr:
+        answer += (i - m) ** 2
+    answer /= len(arr)
+    return answer
+
+def deviation_from_standard(arr, m):
+    answer = math.sqrt(variance(arr, m))
+    return answer
+
 
 # Main program:
+print(deviation_from_standard([1, 7, 0, 3, 9], 4))
