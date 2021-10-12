@@ -130,5 +130,13 @@ def central_moment(arr, m, r):
     answer /= len(arr)
     return answer
 
+def moment_of_skewness_coefficient(central_moment_three, ds):
+    #This function will compute moment of skewness coefficient.
+    answer = central_moment_three / ds ** 3
+    return answer
+
+
+
+
 
 # Main program:
