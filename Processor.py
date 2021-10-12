@@ -135,8 +135,16 @@ def moment_of_skewness_coefficient(central_moment_three, ds):
     answer = central_moment_three / ds ** 3
     return answer
 
+def kurtosis_excess(central_moment_four, varian):
+    answer = (central_moment_four / varian ** 2) - 3
+    return answer
 
-
-
+def average_absolute_deviation(arr, m):
+    #This function will compute average absolute deviation of data
+    answer = 0
+    for i in arr:
+        answer += abs(i - m)
+    answer /= len(arr)
+    return answer
 
 # Main program:
