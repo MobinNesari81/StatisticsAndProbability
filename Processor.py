@@ -6,6 +6,7 @@
 # Libraries:
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 #   Notice that you need both numpy and matplotlib libraries for running this program.
 
 # Functions:
@@ -45,8 +46,28 @@ def mode(arr):
             answer.append(seen[i])
     return answer
 
+def quartiles(arr):
+    #This function compute quartiles of data.
+    #Here I assume that data in dicrete.    
+    length = len(arr)
+    answer = []
+    if (length + 1) * 0.25 % 1 == 0:
+        answer.append(arr[int( (length + 1) * 0.25 ) - 1])
+        answer.append(arr[int( (length + 1) * 0.5 ) - 1])
+        answer.append(arr[int( (length + 1) * 0.75 ) - 1])
 
-
+    else:
+        r = int(math.floor((length + 1) * 0.25))
+        w = (length + 1) * 0.25 - r
+        answer.append((1 - w) * arr[r - 1] + w * arr[r])
+        r = int(math.floor((length + 1) * 0.5))
+        w = (length + 1) * 0.5 - r
+        answer.append((1 - w) * arr[r - 1] + w * arr[r])
+        r = int(math.floor((length + 1) * 0.75))
+        w = (length + 1) * 0.75 - r
+        answer.append((1 - w) * arr[r - 1] + w * arr[r])
+    
+    return answer
 
 
 
