@@ -98,6 +98,8 @@ def deviation_from_standard(arr, m):
     answer = math.sqrt(variance(arr, m))
     return answer
 
+def coefficient_of_variation(m, d):
+    answer = d / m
+    return answer
 
 # Main program:
-print(deviation_from_standard([1, 7, 0, 3, 9], 4))
