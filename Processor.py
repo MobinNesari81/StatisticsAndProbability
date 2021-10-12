@@ -70,6 +70,22 @@ def quartiles(arr):
     
     return answer
 
+#   # Variation:
+
+def maximum(arr):
+    # This function will return maximum element of data
+    answer = max(arr)
+    return answer
+
+def minimum(arr):
+    # This function will return minimum element of data
+    answer = min(arr)
+    return answer
+
+def range_data(arr):
+    # This function will return range of elements
+    answer = maximum(arr) - minimum(arr)
+    return answer
 
 
 # Main program:
