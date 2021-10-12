@@ -114,7 +114,21 @@ def second_skewness_coefficient(m,med,ds):
     answer /= ds
     return answer
  
+def moment(arr, r):
+    #This function will compute rth order moment.
+    answer = 0
+    for i in arr:
+        answer += i ** r
+    answer /= len(arr)
+    return answer
 
+def central_moment(arr, m, r):
+    #This function will compute rth order central moment.
+    answer = 0
+    for i in arr:
+        answer += (i - m) ** r
+    answer /= len(arr)
+    return answer
 
 
 # Main program:
