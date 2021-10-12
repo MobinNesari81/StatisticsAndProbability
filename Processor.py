@@ -15,7 +15,18 @@ def mean(arr):
     answer = summation / len(arr)
     return answer
 
+def median(arr):
+    #This function compute median of data.
+    #Here I assume that data in dicrete.
+    length = len(arr)
+    if len(arr) % 2 == 1:
+        return arr[int( (length + 1) / 2) - 1 ]
+    else:
+        answer = 1 / 2 * (arr[int( length / 2 ) - 1] + arr[int( length / 2 + 1 ) - 1])
+        return answer
 
+def Sortation(arr):
+    arr.sort()
 
 
 
