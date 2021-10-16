@@ -1,9 +1,12 @@
 """
+ 
  Project: Create a program which could compute all of the statistics parameters with some data
  This whole project Designed and Developed by : Mobin Nesari 99222107 CopyRight T.Stark
- Hope you enjoy it :D """
+ Hope you enjoy it :D 
+ 
+ """
 
-# Libraries:
+# Modules:
 import numpy as np
 import matplotlib.pyplot as plt
 import math
@@ -28,6 +31,7 @@ def median(arr):
         return answer
 
 def Sortation(arr):
+    #This function sort data.
     arr.sort()
 
 def mode(arr):
@@ -88,17 +92,20 @@ def range_data(arr):
     return answer
 
 def variance(arr, m):
+    #This function will compute variance of data
     answer = 0
     for i in arr:
         answer += (i - m) ** 2
     answer /= len(arr)
     return answer
 
-def deviation_from_standard(arr, m):
+def standard_deviation(arr, m):
+    #This function compute standard deviation of data.
     answer = math.sqrt(variance(arr, m))
     return answer
 
 def coefficient_of_variation(m, d):
+    #This function compute coefficient of variation of data.
     answer = d / m
     return answer
 
@@ -136,6 +143,7 @@ def moment_of_skewness_coefficient(central_moment_three, ds):
     return answer
 
 def kurtosis_excess(central_moment_four, varian):
+    #This function cumpute kurtosis excess of normal curve of data.
     answer = (central_moment_four / varian ** 2) - 3
     return answer
 
@@ -147,4 +155,3 @@ def average_absolute_deviation(arr, m):
     answer /= len(arr)
     return answer
 
-# Main program:
